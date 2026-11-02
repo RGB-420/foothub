@@ -79,11 +79,11 @@ Las actas de sesion viviran en `SESSION_LOG.md`. Sirven para recordar que se hiz
 
 ## Estado actual
 
-Fase actual: `Fase 3 - Usuario y objetivo inicial` completada
+Milestone actual: `W3 - Portfolio architecture and editorial analysis pages` implementado; `W1` y `W2` han pasado auditoria independiente.
 
-Subpaso actual: `3.4 Ajustar la seccion de identidad si cambia el enfoque` completado
+La `Fase 3 - Usuario y objetivo inicial` permanece completada. Los bloques historicos de discovery se conservan como contexto; no hay una muestra publicable.
 
-Siguiente accion: esperar aprobacion expresa para iniciar la `Fase 4 - Muestras iniciales de trabajo` y trabajar el subpaso `4.1 Elegir que tipo de muestras se ensenaran al principio`.
+Siguiente accion: detenerse al terminar W3 y esperar una instruccion expresa para W4. No publicar muestras ni iniciar visores por inferencia.
 
 ---
 
@@ -401,3 +401,35 @@ Las decisiones completadas se iran registrando aqui de forma resumida.
 | 2026-07-08 | 3.3 | Se define la reaccion buscada: primero percibir valor inmediato y despues ver al analista como una opcion real si el club o cuerpo tecnico necesita apoyo de analisis. |
 | 2026-07-08 | 3.4 | Se ajustan textos de la seccion de identidad: la home queda como respaldo de credibilidad y las paginas de analisis como principal gancho de valor futuro. |
 | 2026-07-08 | Fase 3 | La Fase 3 queda cerrada: usuario, secundarios, reaccion buscada y rol de la home quedan definidos antes de pasar a muestras. |
+
+## 2026-10-13 — W1 visual milestone
+
+W1 visual foundation and logo integration implemented under the user's explicit scope. Existing homepage information architecture and content preserved. TypeScript/production build and responsive browser checks at 1280, 390, and 320px passed. Visual conventions and verification are recorded in ../engineering/w1-visual-foundation.md.
+
+W2 is deferred and has not started. This visual milestone does not authorize the work-samples phase or change its decisions.
+
+## 2026-10-13 — W2 homepage milestone
+
+W1 passed independent audit. W2 is implemented under explicit user authorization: compact personal introduction with early portrait, unpublished featured work, methodology, training profile, and separate direct contact. See [W2 homepage architecture](../engineering/w2-homepage-architecture.md) for decisions and checks.
+
+No real sample is published and no report viewer exists. The earlier discovery phases retain their historical decisions; this milestone does not fabricate or approve a sample. W3 is deferred and has not started. No commits were requested or created.
+
+## 2026-10-13 — W3 portfolio milestone
+
+W1 and W2 passed independent audits. Explicit W3 authorization implemented `/analisis`, `/analisis/:slug`, not-found routes, one typed manual publication registry, a reusable editorial template, and homepage featured work using the same source. No real report is available, so publication remains empty and honest. Personal identity, W1 styling and W2 anchors/contact are preserved. No new dependencies, backend, CMS, database or RGB application integration.
+
+TypeScript/build and browser checks at 1280, 390 and 320 CSS pixels passed for home, empty portfolio, unknown slug and not-found. Direct navigation, refresh, history and keyboard activation checked. Populated report visuals and deployed hosting fallback remain unverified until real content and hosting exist. See [W3 architecture](../engineering/w3-portfolio-architecture.md) for the manual workflow, file list and limitations.
+
+W3 implementation complete. Stop here; W4 requires a separate instruction. No commits created.
+
+## W4.1 — Visual case-study presentation (2026-10-13)
+
+W1–W3 independent audits passed as confirmed by the user. W4.1 implementation complete for review: curated public visual case studies, flexible editorial sections, numbered responsive evidence and consistent image previews. Production registry remains empty pending authentic reviewed material. Full PowerPoint reports are privately delivered outside the site. [Implementation and checks](../engineering/w4-1-case-study-presentation.md).
+
+W4.2 video presentation remains deferred and requires separate authorization. No viewers/downloads/backend/integrations/client areas/pricing implemented. No commits.
+
+## W4.2 — Audiovisual evidence and media resilience (2026-10-13)
+
+W1–W4.1 passed independent audits as confirmed by the user. W4.2 implemented under explicit authorization: native short video evidence, optional posters/WebVTT, resilient image/video failures, original-dimension reservation and extended manual publication validation. Production registry stays empty. TypeScript, publication validation, 75 validation assertions, production build and responsive browser checks passed. See [implementation and verification](../engineering/w4-2-audiovisual-evidence.md) for the exact coverage and limitations.
+
+W4.2 complete for review. W5 and W6 remain deferred and unstarted. No commits, viewers, report downloads, backend, integrations or synthetic publications.

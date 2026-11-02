@@ -12,6 +12,8 @@ Este manual es la fuente de verdad para proyectos futuros. El proyecto original 
 
 ## Proposito
 
+Notas del portfolio actual: [W1](w1-visual-foundation.md), [W2](w2-homepage-architecture.md), [W3 y publicación manual](w3-portfolio-architecture.md).
+
 El objetivo es que un desarrollador o un Codex futuro pueda recibir este manual junto a una idea nueva, por ejemplo un CRM para clubes de futbol, y construir la aplicacion siguiendo la misma forma de trabajo.
 
 El estilo resultante debe ser:
@@ -76,3 +78,9 @@ Las ADRs y la documentacion de contexto para IA convierten decisiones tacitas en
 El manual no intenta imponer que todos los productos tengan scraping, pipelines, admin o calidad de datos. Impone como deben organizarse esas capacidades cuando existan.
 
 Si un proyecto futuro no necesita una capa, se omite explicitamente. No se deja a medias.
+
+## Current portfolio presentation
+
+[W4.1 — Visual case-study presentation](w4-1-case-study-presentation.md) documents ordered sections, evidence presentation, manual publication safeguards and isolated verification. Public case studies demonstrate the analyst's work; complete reports stay private.
+
+Portfolio media: [W4.2 audiovisual evidence and resilience](w4-2-audiovisual-evidence.md).

@@ -5,7 +5,9 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "tsc -b && vite build",
+    "build": "tsc -b && npm run verify:publications && vite build",
+    "verify:publications": "node scripts/verify-publications.mjs",
+    "test:publications": "node scripts/test-publications.mjs",
     "preview": "vite preview"
   },
   "dependencies": {

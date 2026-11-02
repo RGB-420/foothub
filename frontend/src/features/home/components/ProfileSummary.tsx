@@ -1,68 +1,38 @@
-import { Linkedin, Mail, MapPin } from "lucide-react"
-import { profileContent } from "../content/profileContent"
+const supportingBlocks = [
+  {
+    title: "Historia y táctica",
+    description: "Estudio la evolución de las ideas de juego y me formo en análisis táctico.",
+  },
+  {
+    title: "Ingeniería y análisis",
+    description: "Formación en Ingeniería de Sistemas Aeroespaciales y experiencia desarrollando software.",
+  },
+  {
+    title: "RGB 420",
+    description: "Desarrollo herramientas propias para trabajar con vídeo, datos y análisis futbolístico.",
+  },
+]
 
-export const ProfileSummary = () => {
-  return (
-    <section className="border-t border-border bg-surface/70" id="contact">
-      <div className="mx-auto grid max-w-6xl gap-10 px-5 py-14 md:grid-cols-[0.85fr_1.15fr]">
-        <div className="space-y-4">
-          <p className="font-display text-base font-semibold uppercase tracking-[0.18em] text-cyan">
-            Perfil
-          </p>
-          <h2 className="font-display text-5xl font-bold uppercase leading-none tracking-wide text-text">
-            Claridad, juego y utilidad practica.
-          </h2>
-        </div>
-
-        <div className="space-y-8">
-          <div className="space-y-4 text-base font-medium leading-7 text-muted">
-            <p>{profileContent.profileText}</p>
-            <p>{profileContent.professionalMessage}</p>
-          </div>
-
-          <div className="grid gap-3 sm:grid-cols-2">
-            <div className="rounded-lg border border-border bg-background/70 p-4">
-              <div className="flex items-center gap-2 text-sm font-semibold text-text">
-                <MapPin className="text-primary" size={18} aria-hidden="true" />
-                Base
-              </div>
-              <p className="mt-2 text-sm font-medium text-muted">
-                {profileContent.baseLocation}
-              </p>
-            </div>
-
-            <div className="rounded-lg border border-border bg-background/70 p-4">
-              <div className="text-sm font-semibold text-text">Disponibilidad</div>
-              <p className="mt-2 text-sm font-medium text-muted">
-                {profileContent.availability}
-              </p>
-            </div>
-          </div>
-
-          <div className="flex flex-wrap gap-3">
-            <a
-              aria-label="Enviar correo"
-              className="inline-flex items-center gap-2 rounded-md bg-contrast px-4 py-3 text-sm font-semibold text-white transition hover:bg-cyan hover:text-background"
-              href={`mailto:${profileContent.email}`}
-            >
-              <Mail size={18} aria-hidden="true" />
-              Correo
-            </a>
-
-            {profileContent.linkedInUrl ? (
-              <a
-                className="inline-flex items-center gap-2 rounded-md border border-border px-4 py-3 text-sm font-semibold text-text transition hover:border-cyan hover:text-cyan"
-                href={profileContent.linkedInUrl}
-                rel="noreferrer"
-                target="_blank"
-              >
-                <Linkedin size={18} aria-hidden="true" />
-                LinkedIn
-              </a>
-            ) : null}
-          </div>
-        </div>
+export const ProfileSummary = () => (
+  <section aria-labelledby="profile-title" id="profile" className="border-b border-border bg-surface">
+    <div className="page-container py-12 sm:py-14">
+      <p className="section-label">SOBRE MÍ</p>
+      <div className="mt-3 grid items-start gap-5 md:grid-cols-[0.9fr_1.1fr] md:gap-12">
+        <h2 id="profile-title" className="font-display text-3xl font-semibold leading-tight text-text sm:text-4xl">Entender el juego desde sus raíces.</h2>
+        <p className="border-l-2 border-primary pl-4 text-base leading-7 text-text">
+          El fútbol me fascina como expresión de la sociedad, la estrategia y la cooperación. Me interesa comprender cómo han evolucionado sus ideas tácticas para interpretar mejor el juego actual.
+        </p>
       </div>
-    </section>
-  )
-}
+      <ul className="author-context mt-6 grid gap-5 border-t border-border pt-6">
+        {supportingBlocks.map(({ title, description }) => (
+          <li key={title}>
+            <div>
+              <h3 className="font-display text-xl font-semibold text-text">{title}</h3>
+              <p className="mt-1 text-sm leading-6 text-muted">{description}</p>
+            </div>
+          </li>
+        ))}
+      </ul>
+    </div>
+  </section>
+)

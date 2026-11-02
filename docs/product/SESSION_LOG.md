@@ -798,3 +798,65 @@ Se anadio una nota de vision futura sobre analitica de visualizacion de informes
 ### Siguiente paso
 
 Esperar aprobacion expresa para iniciar la `Fase 4 - Muestras iniciales de trabajo` y trabajar el subpaso `4.1 Elegir que tipo de muestras se ensenaran al principio`.
+
+## 2026-10-13 — W1: Visual foundation and logo integration
+
+User-authorized W1 implemented after reviewing product vision, principles, roadmap, session history, architecture, frontend conventions, naming, blueprint, anti-patterns, and agent guidance.
+
+Centralized semantic design tokens, standardized interaction states, fixed primary-button contrast, removed decorative gradients/glows/pitch graphics and nested panels, preserved fonts/navy/content/routes, improved keyboard focus and reduced-motion support, and integrated the original RGB 420 artwork as a discreet footer identity using a separate lossless cropped PNG with its black background retained. The analyst name now leads navigation. No dependencies added.
+
+TypeScript and production build passed; browser layouts inspected at measured 1280, 390, and 320px with no horizontal overflow, readable logo, and functional work/contact anchors. Existing React Router migration warnings remain. Reduced-motion CSS inspected but OS preference emulation not exercised. See engineering/w1-visual-foundation.md for conventions, asset provenance, and checks.
+
+W1 implementation complete. W2 and the roadmap's initial-work-samples phase were not started.
+
+## 2026-10-13 — W2: Homepage information architecture
+
+W1 passed independent audit, as confirmed by the user. The user explicitly authorized W2 and required stopping before W3 without commits.
+
+Reviewed product vision, principles, roadmap, session history, frontend architecture/handoff guidance, and W1 visual conventions. Reorganized the single homepage into compact personal introduction, featured work, methodology, analyst profile, and separate contact. Spanish copy identifies Raúl as an independent tactical analyst while retaining the existing training context. The portrait now appears beside the name in the initial mobile view. No publishable sample exists, so featured work is explicitly unpublished and has no fabricated evidence or report links.
+
+The navigation-name link now has a 44px minimum height and returns home. Perfil targets the new profile section; work/contact anchors and the existing email remain. W1 tokens, fonts, navy foundation, focus and reduced-motion rules are preserved; logo files are unchanged.
+
+TypeScript/production build passed. Browser inspected at actual 1280, 390, and 320px widths: no overflow, early visible portrait, correct section order, keyboard focus, and functional anchors. Full decisions and verification: ../engineering/w2-homepage-architecture.md.
+
+W2 implementation complete. Await a separate W3 instruction; no W3 work or commits performed.
+
+## 2026-10-13 — W3: Portfolio architecture and editorial analysis pages
+
+The user confirmed W1/W2 independent audits and explicitly authorized W3, with no commits and no W4 work. Reviewed README, product vision/principles, roadmap/session history, frontend/manual/blueprint/anti-pattern guidance and W1/W2 engineering notes.
+
+Added portfolio, analysis and not-found routes; a small typed static content model; one empty publication registry; reusable editorial listing/detail components; and homepage selection from the same source. Optional sections and real asset links render only when supplied. Manual registration and assets operate independently of all other RGB 420 applications. W1 tokens and W2 identity, section order, native anchors and email remain.
+
+TypeScript and production build passed after the sandbox's Windows realpath EPERM was resolved through the approved external build. Production-preview browser checks passed for four routes at 1280, 390 and 320px with no horizontal overflow. Direct loads, refresh, back/forward and keyboard focus/activation verified. Populated detail/featured content awaits a real analysis for visual verification; deployed SPA fallback is not testable without hosting. No content was fabricated.
+
+Updated README, engineering index, W3 architecture/manual-publication note and roadmap. Full file list, design decisions, checks and limitations: [W3 engineering note](../engineering/w3-portfolio-architecture.md).
+
+W3 complete. W4 viewers/presentation display remain deferred pending separate authorization. No commits created.
+
+## 2026-10-13 — W3.1: Portfolio stabilization
+
+The user reported that W3 failed independent audit and explicitly authorized only W3.1, with no commits and no W4. Reviewed the W3 implementation note, W1/W2 conventions, repository/manual guidance, existing changes and all supplied audit findings before editing.
+
+Guarded fragment decoding against URIError; moved route-title updates ahead of fragment handling; focused H1 only on initial/path changes while preserving same-page focus and native POP behavior. Fixed the article width cascade with an explicit combined selector, retaining shared gutters. Added lightweight typed publication validation and build-time local-file checks using the existing TypeScript compiler, plus isolated regression fixtures. Draft publication filtering remains explicit and verified. The public registry is still empty.
+
+TypeScript and production build passed (approved external execution resolved the inherited Windows realpath sandbox issue). Forty isolated publication assertions passed. Production routes and empty states checked at 1280, 390 and 320 CSS pixels with no overflow. Malformed/unknown hashes, native homepage anchors, titles, heading/link focus, keyboard activation and browser history checked. A separate temporary build exercised clearly labelled synthetic report/draft data and responsive evidence imagery; no fixture entered the production registry/output. Computed article cap was 800px/50rem with 20px gutters, and mobile border-box widths were 375/305px. Temporary fixture files were removed. No production console errors found.
+
+Full changed-file list, validation contract, root causes, verification evidence and limitations are recorded in [W3 engineering note](../engineering/w3-portfolio-architecture.md#w31--stabilization-after-failed-independent-w3-audit-2026-10-13). W3.1 awaits independent re-verification of all reported findings. Real content review, deployed hosting fallback and cross-browser/screen-reader testing remain outside the local evidence. Existing W1/W2 work is preserved. Stop after W3.1; W4 has not started and no commits were created.
+
+## 2026-10-13 — W4.1: Visual case-study presentation
+
+W1–W3 passed independent audits according to the user. Explicitly authorized W4.1 implemented after reviewing repository/product guidance and W1–W3 architecture. Public portfolio entries demonstrate personal methodology, judgement and quality through curated visual evidence; complete PowerPoint reports remain private. This supersedes older public full-report delivery guidance.
+
+Reused W3 template; added optional objective, ordered typed editorial sections and evidence source/match context. Wide visual canvas retains a constrained reading measure. Shared figures preserve aspect ratio and include sequential captions and alt text. Shared index/featured previews give images approximately 60% of desktop columns. Manual publication/draft safeguards extended to validate section references/duplicates/empty blocks. Public PDF/PPTX/video asset controls suppressed; no viewers or players. Registry remains empty.
+
+TypeScript/publication validation/production build passed after resolving inherited sandbox Windows EPERM through approved execution. 53 isolated validation assertions passed. Empty production routes and populated isolated fixtures checked at actual 1280/390/320 CSS pixels without overflow; wide/portrait image ratios, accessible captions/descriptions and keyboard figure links inspected. Legacy rendering retained. No authentic content supplied, so editorial accuracy/rights and real content balance remain unverified; cross-browser/screen-reader and deployed hosting checks remain limitations.
+
+Full file list, authoring workflow and verification: [W4.1 engineering note](../engineering/w4-1-case-study-presentation.md). Existing W1–W3 work preserved. No commits. Stop after W4.1; W4.2 video presentation has not started.
+
+## 2026-10-13 — W4.2: Audiovisual evidence and media resilience
+
+Explicit user authorization after W1–W4.1 passed independent audits. Resolved W4.1 image failure warning and extended the shared evidence renderer/model with native video controls, optional poster/captions, original dimensions and accessible failure states. Extended lightweight validation and isolated fixtures without adding production content, dependencies or services. Full reports stay private; personal identity and existing editorial conventions remain.
+
+TypeScript/publication validation/build passed (approved build execution needed for inherited Windows sandbox realpath restriction). All 75 validation assertions passed. Browser verified actual WebM playback to completion, pause, poster, loaded captions, keyboard evidence navigation/focus, missing image/video and invalid video failure messages. Ordered/legacy fixtures and production routes checked at 1280/390/320px without horizontal overflow. Fixed fallback width expansion found at 320px. MP4 decoding, audible volume, fullscreen, conclusive seeking and cross-browser/screen-reader checks remain limitations.
+
+[W4.2 engineering note](../engineering/w4-2-audiovisual-evidence.md) records model, files, authoring rules and verification. Existing work preserved. No commits. W5 and W6 remain deferred; stop after W4.2.
