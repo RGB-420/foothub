@@ -76,7 +76,11 @@ export const AnalysisArticle = ({ analysis }: { analysis: Analysis }) => (
     <footer className="editorial-section editorial-copy">
       <p className="font-semibold">Análisis de {analysis.author}</p>
       <p className="mt-3 text-muted">Para conversar sobre este trabajo o una posible colaboración:</p>
-      <a className="editorial-link inline-flex min-h-11 items-center" href={`mailto:${profileContent.email}`}>{profileContent.email}</a>
+      {profileContent.emailEnabled ? (
+        <a className="editorial-link inline-flex min-h-11 items-center" href={`mailto:${profileContent.email}`}>{profileContent.email}</a>
+      ) : (
+        <span className="inline-flex min-h-11 max-w-full items-center break-all">{profileContent.email}</span>
+      )}
     </footer>
   </article>
 )

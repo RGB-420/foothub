@@ -14,12 +14,15 @@ export const Contact = () => (
         </p>
         <p className="mt-3 text-sm leading-6 text-muted">{profileContent.availability}.</p>
         <div className="mt-5 flex flex-wrap gap-3">
-          <a className="button button-primary max-w-full" href={`mailto:${profileContent.email}`}>
+          {profileContent.emailEnabled ? <a className="button button-primary max-w-full" href={`mailto:${profileContent.email}`}>
             <Mail size={18} className="shrink-0" aria-hidden="true" />
             <span className="break-all">{profileContent.email}</span>
-          </a>
+          </a> : <span className="inline-flex min-h-11 max-w-full items-center gap-2 border border-primary bg-primary px-6 py-3 text-sm font-semibold text-background">
+            <Mail size={18} className="shrink-0" aria-hidden="true" />
+            <span className="min-w-0 break-all">{profileContent.email}</span>
+          </span>}
           {profileContent.linkedInUrl ? (
-            <a className="button button-secondary" href={profileContent.linkedInUrl} rel="noreferrer" target="_blank">
+            <a className="button button-secondary" href={profileContent.linkedInUrl} rel="noopener noreferrer" target="_blank" aria-label="LinkedIn de Raúl García Bejarano (se abre en una pestaña nueva)">
               <Linkedin size={18} aria-hidden="true" />
               LinkedIn
             </a>
